@@ -21,3 +21,5 @@ fs.readFile("./contacts.txt", "utf-8", (err, data) => {
 
 fs.appendFileSync("./contacts.txt", `${new Date(Date.now())}  Hey there\n`);
 fs.copyFileSync("./contacts.txt", "./copy.txt");
+
+fs.unlinkSync("./create.txt");
