@@ -4,12 +4,12 @@ const fs = require("fs");
 fs.writeFileSync("./create.txt", "Hey there");
 
 // write file Async
-fsj.writeFile("./create.txt", "Hey there", (err) => {});
+fs.writeFile("./create.txt", "Hey there", (err) => {});
 
 // read file Sychronously
 const result = fs.readFileSync("./contacts.txt", "utf-8");
 
-console.log(result);
+// console.log(result);
 
 fs.readFile("./contacts.txt", "utf-8", (err, data) => {
   if (err) {
@@ -18,3 +18,5 @@ fs.readFile("./contacts.txt", "utf-8", (err, data) => {
     console.log(data);
   }
 });
+
+fs.appendFileSync("./contacts.txt", new Date().getDate().toLocaleString());
