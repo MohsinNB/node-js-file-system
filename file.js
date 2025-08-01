@@ -19,4 +19,5 @@ fs.readFile("./contacts.txt", "utf-8", (err, data) => {
   }
 });
 
-fs.appendFileSync("./contacts.txt", new Date().getDate().toLocaleString());
+fs.appendFileSync("./contacts.txt", `${new Date(Date.now())}  Hey there\n`);
+fs.copyFileSync("./contacts.txt", "./copy.txt");
